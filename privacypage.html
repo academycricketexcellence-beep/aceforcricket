@@ -1,0 +1,313 @@
+<!-- ================== ACE CRICKET ACADEMY — PRIVACY POLICY (LIGHT THEME, WITH FOOTER LINKS + CONTACT) ================== -->
+<div id="ace-privacy" class="theme-light">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+    :root{
+      --orange:#FF7E00; --amber:#FF4500; --purple:#6B3BFF;
+      --ink:#1C1C1E; --ink-2:#404257; --muted:#6A6F8A;
+      --white:#ffffff; --ivory:#FBFBFE; --panel:#F4F6FF;
+      --line:#E6E9F4; --shadow:0 18px 46px rgba(18,20,34,.12);
+      --grid:1100px; --r:16px;
+    }
+    #ace-privacy, #ace-privacy *{ box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    .container{ max-width:var(--grid); margin:0 auto; padding:0 22px; }
+    .theme-light{ background:var(--ivory); color:var(--ink); }
+
+            /* Top bar / Nav */
+    .topbar { 
+      position:sticky; 
+      top:0; 
+      z-index:1000; 
+      background:rgba(255, 255, 255, 0.85); 
+      backdrop-filter:blur(12px); 
+      -webkit-backdrop-filter:blur(12px); 
+      border-bottom:1px solid rgba(230, 233, 244, 0.7); 
+      box-shadow:0 4px 30px rgba(18, 20, 34, 0.04); 
+      transition:all 0.3s ease; 
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; flex-wrap:nowrap; }
+    .brand { display:flex; align-items:center; gap:14px; text-decoration:none; transition:transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .brand:hover { transform:translateY(-2px); }
+    .brand img { height:68px; width:auto; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.08); }
+    .brand .meta { display:flex; flex-direction:column; line-height:1.2; gap:4px; }
+    .brand .meta b { font-weight:800; color:#22253A; font-size:1.05rem; letter-spacing:0.3px; }
+    .brand .meta small { color:#FF7E00; font-weight:700; font-size:0.8rem; letter-spacing:0.5px; text-transform:uppercase; }
+    .navlinks { display:flex; align-items:center; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .navlinks a { 
+      padding:10px 18px; 
+      border-radius:999px; 
+      border:1.4px solid transparent; 
+      text-decoration:none; 
+      font-weight:700; 
+      color:#3D4059; 
+      font-size:.95rem; 
+      white-space:nowrap; 
+      transition:all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    }
+    .navlinks a:hover { 
+      color:#FF7E00; 
+      background:linear-gradient(135deg, rgba(255,126,0,.08), rgba(255,69,0,.04)); 
+      border-color:rgba(255,126,0,.2); 
+      transform:translateY(-2px); 
+    }
+
+    /* Hero */
+    .hero{ padding:58px 0 28px; position:relative; }
+    .hero:before{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(80% 60% at 50% 0%, rgba(107,59,255,.10) 0%, rgba(107,59,255,0) 60%),
+        linear-gradient(180deg, rgba(255,126,0,.10), rgba(255,126,0,0));
+      pointer-events:none;
+    }
+    .h1{ font-weight:800; font-size:2.6rem; line-height:1.14; margin:0 0 8px; letter-spacing:.2px; }
+    .lead{ font-size:1.14rem; line-height:1.9; color:var(--ink-2); }
+    .tag{ display:inline-block; margin-top:10px; padding:8px 12px; border-radius:12px; border:1.2px solid #e5e8f5; background:#fff; font-weight:700; color:#61678b; }
+
+    /* Content */
+    .section{ padding:64px 0; }
+    .panel{ background:var(--white); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:26px; }
+    .h2{ font-weight:800; font-size:1.6rem; margin:36px 0 6px; }
+    .panel .h2:first-child{ margin-top:0; }
+    .h3{ font-weight:700; font-size:1.12rem; margin:16px 0 6px; color:#2b2f46; }
+    .p{ color:var(--ink-2); line-height:1.9; font-size:1.05rem; margin:8px 0 16px; }
+    ul, ol{ color:var(--ink-2); line-height:1.9; margin:8px 0 16px 20px; font-size:1.05rem; }
+    .note{ background:#fff7ef; border:1px solid #ffe1c2; color:#6b3a00; padding:10px 12px; border-radius:10px; font-weight:600; display:inline-block; }
+
+    /* Quick index table */
+    table.responsive{ width:100%; border-collapse:separate; border-spacing:0; border:1px solid #D9DEF2; border-radius:12px; overflow:hidden; background:#fff; margin:12px 0 0; }
+    thead th{ background:linear-gradient(180deg,#F4F6FF,#EEF1FF); color:#2b2e3d; text-align:left; padding:12px 14px; border-bottom:1px solid #DDE2F4; font-size:.98rem; }
+    tbody td{ padding:12px 14px; border-top:1px solid #E6EAF6; color:#3b4160; font-size:.98rem; }
+    tbody tr:nth-child(2n){ background:#FAFBFF; }
+
+    /* Contact / Map — icons not underlined, only text */
+    .contactCard{ background:#fff; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:22px; }
+    .contactRow{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; font-size:1.10rem; color:#2b2e3d; }
+    .contactRow .label{ font-weight:800; }
+    .contactRow a{ color:#2b2e3d; text-decoration:none; display:inline-flex; align-items:center; gap:6px; }
+    .contactRow .ico{ text-decoration:none; }
+    .contactRow .txt{ text-decoration:underline; text-underline-offset:3px; }
+    .contactRow a:hover .txt{ color:#5532d8; }
+    .mapWrap{ margin-top:14px; border-radius:14px; overflow:hidden; border:1px solid #e5e8f5; }
+    .mapWrap iframe{ width:100%; height:360px; display:block; border:0; }
+
+    /* Footer — link-looking buttons incl. Refunds */
+    .foot{ background:#f7f8ff; color:#6a6f8a; font-size:.98rem; line-height:1.6; padding:26px 0; border-top:1px solid var(--line); text-align:center; }
+    .foot .links{ margin-bottom:12px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .foot .links a{
+      color:var(--purple); font-weight:800; text-decoration:none; padding:6px 10px; border-radius:10px;
+      background:#ffffff; border:1px solid #E2E6FB;
+    }
+    .foot .links a:hover{ background:#F0F2FF; border-color:#cfd5fb; }
+
+    /* Mobile tweaks — center the button, stack table rows */
+    @media (max-width:780px){
+      .h1{ font-size:2.1rem; }
+      .panel{ padding:20px; }
+      .mapWrap iframe{ height:280px; }
+      .nav{ flex-wrap:wrap; align-items:flex-start; }
+      .btn-ghost{ order:2; width:100%; display:flex; justify-content:center; margin-top:8px; } /* centered button */
+      .brand img{ height:68px; }
+      .brand .meta{ gap:6px; }
+
+      /* Table -> stacked cards */
+      table.responsive thead{ display:none; }
+      table.responsive, table.responsive tbody, table.responsive tr, table.responsive td{ display:block; width:100%; }
+      table.responsive tr{ background:#fff; border:1px solid #E2E6FB; border-radius:12px; margin:0 0 12px; overflow:hidden; }
+      table.responsive td{ border-top:0; padding:12px 14px 10px; }
+      table.responsive td + td{ border-top:1px solid #EEF1FF; }
+      table.responsive td::before{
+        content:attr(data-label);
+        display:block; font-weight:800; color:#2b2e3d; margin-bottom:4px;
+      }
+    }
+    /* before
+.contactRow{ display:flex; gap:18px; flex-wrap:wrap; align-items:center; font-size:1.05rem; color:#3b4160; }
+*/
+.contactRow{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  font-size:1.05rem;
+  color:#3b4160;
+  column-gap:18px;   /* keep horizontal spacing */
+  row-gap:2px;       /* virtually no vertical space between lines */
+}
+
+/* make address consume full line */
+.contactRow .addr{ flex-basis:100%; }
+  </style>
+
+      <!-- NAV -->
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="ACE Home">
+        <img alt="ACE Academy crest logo" src="Assets folder/Ace Logo.png">
+        <span class="meta">
+          <b>Academy for Cricket Excellence</b>
+          <small>Since 2017 • Vizag</small>
+        </span>
+      </a>
+      <nav class="navlinks" aria-label="Home navigation">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="privacypage.html">Privacy</a>
+        <a href="terms&condition.html">Terms</a>
+        <a href="refund&cancellation.html">Refunds</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="h1">Privacy Policy</h1>
+      <p class="lead">How ACE – Academy for Cricket Excellence, under <strong>Sri Lakshminarasimha Sports Academy</strong> (“ACE”, “we”, “us”, “our”), collects, uses, secures, and shares your personal information across our website, communication channels, and coaching programs.</p>
+      <span class="tag">Last updated: 25 Nov 2025</span>
+    </div>
+  </section>
+
+  <!-- QUICK INDEX -->
+  <section class="section">
+    <div class="container panel">
+      <div class="h2">At a glance</div>
+      <table class="responsive">
+        <thead><tr><th>What we collect</th><th>Why we collect it</th><th>Retention</th></tr></thead>
+        <tbody>
+          <tr>
+            <td data-label="What we collect">Contact & player details (name, age, role, city, email, phone)</td>
+            <td data-label="Why we collect it">Registration, communication, eligibility, safety</td>
+            <td data-label="Retention">Up to 24 months from last activity unless law requires longer</td>
+          </tr>
+          <tr>
+            <td data-label="What we collect">Device/usage data (IP, pages, UTM, referrer, cookies)</td>
+            <td data-label="Why we collect it">Security, analytics, funnel performance, fraud prevention</td>
+            <td data-label="Retention">12–24 months (aggregated thereafter)</td>
+          </tr>
+          <tr>
+            <td data-label="What we collect">Payment status metadata (via payment gateway)</td>
+            <td data-label="Why we collect it">Booking confirmation, receipts, reconciliation</td>
+            <td data-label="Retention">As per statutory accounting/tax norms</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="p" style="margin-top:10px;"><span class="note">We don’t sell personal data.</span></p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="section">
+    <div class="container panel">
+      <div class="h2">1) Scope</div>
+      <p class="p">This Policy applies to our website pages, registration forms, coaching programs, training sessions, assessments, clinics, bootcamps, and our communications (email, SMS, WhatsApp, phone). By using our services, you agree to this Policy.</p>
+
+      <div class="h2">2) Information we collect</div>
+      <div class="h3">A. Information you provide</div>
+      <ul>
+        <li>Player/guardian details: name, age, email, phone, city, skill level, playing role.</li>
+        <li>Application responses, messages, and support queries.</li>
+        <li>Payment confirmations (handled by our gateway; we don’t store full card details).</li>
+      </ul>
+      <div class="h3">B. Information we get automatically</div>
+      <ul>
+        <li>Device and log data: IP address, browser, device type, time zone, pages visited, referrer/UTM, clicks.</li>
+        <li>Cookies & similar tech for session management, preferences, analytics, and conversion tracking.</li>
+      </ul>
+
+      <div class="h2">3) How we use your information</div>
+      <ul>
+        <li>Process registrations, scheduling, and essential updates.</li>
+        <li>Send brochures, payment links, receipts, and reporting instructions.</li>
+        <li>Improve coaching, safety, websites, and funnels through aggregated analytics.</li>
+        <li>Prevent spam, fraud, and abuse; comply with legal or regulatory obligations.</li>
+        <li>With your consent, share program updates and announcements.</li>
+      </ul>
+
+      <div class="h2">4) Legal bases</div>
+      <p class="p">We rely on one or more of: <strong>performance of a contract</strong>, <strong>legitimate interests</strong> (security, analytics, improvements), <strong>consent</strong> (marketing/WhatsApp opt-ins), and <strong>legal obligation</strong> (tax/records).</p>
+
+      <div class="h2">5) Cookies & analytics</div>
+      <p class="p">We may use essential cookies for forms and security, and analytics/advertising cookies for performance measurement and retargeting. You can control non-essential cookies via your browser settings. Blocking essential cookies may break certain features.</p>
+
+      <div class="h2">6) Payments</div>
+      <p class="p">Payments are processed by third-party gateways over secure connections. We receive limited metadata (success/failure, transaction IDs) for reconciliation; card numbers are not stored on ACE servers.</p>
+
+      <div class="h2">7) Sharing & service providers</div>
+      <ul>
+        <li>Trusted vendors for hosting, CRM, email/SMS/WhatsApp delivery, analytics, and payment gateways.</li>
+        <li>Program partners, coaches, or venues—only what’s necessary for operations/safety.</li>
+        <li>Legal/regulatory requests when required by law or to protect rights, safety, or property.</li>
+      </ul>
+
+      <div class="h2">8) International transfers</div>
+      <p class="p">Some providers may process data outside India. We select vendors who implement appropriate safeguards (contractual, technical, and organizational) to protect your data.</p>
+
+      <div class="h2">9) Data retention</div>
+      <ul>
+        <li>Registration & communication records: up to 24 months from last activity, unless longer is required for legal claims or compliance.</li>
+        <li>Financial/transaction data: as per applicable tax and accounting laws.</li>
+        <li>Aggregated or anonymized data may be retained for analytics and reporting.</li>
+      </ul>
+
+      <div class="h2">10) Security</div>
+      <p class="p">We use reasonable administrative, technical, and physical safeguards (access controls, encryption in transit, role-based permissions). No system is 100% secure; report concerns to the email below.</p>
+
+      <div class="h2">11) Children’s privacy</div>
+      <p class="p">Registrations may involve minors (10–17). Where relevant, we may request parent/guardian consent for participation and communications. Guardians can request access, correction, or deletion (subject to record obligations).</p>
+
+      <div class="h2">12) Your rights</div>
+      <ul>
+        <li>Access, correction, and deletion (where feasible and lawful).</li>
+        <li>Withdraw consent for marketing at any time (effects future messages only).</li>
+        <li>Object to or restrict certain processing based on legitimate interests.</li>
+        <li>Data portability where applicable.</li>
+      </ul>
+      <p class="p">To exercise rights, contact us using the details below. We may verify your identity before responding.</p>
+
+      <div class="h2">13) Third-party links</div>
+      <p class="p">Our pages may link to external sites (e.g., payment, video, social). Their privacy practices are their own—review their policies before using those services.</p>
+
+      <div class="h2">14) Changes to this Policy</div>
+      <p class="p">We may update this Policy periodically. The “Last updated” date at the top reflects the latest version. Material changes will be highlighted on this page.</p>
+
+      <div class="h2">15) Contact</div>
+      <div class="contactCard">
+        <div class="contactRow">
+          <span class="label">🏫 ACE — Academy for Cricket Excellence (Vizag)</span>
+          <a class="addr" href="https://maps.google.com/?q=ACE%20Grounds,%20Shiv%20Shakti%20layout,%20beside%20Sontyam,%20Sontyam,%20Andhra%20Pradesh%20530059" target="_blank" rel="noopener">
+  <span class="ico">📍</span><span class="txt">ACE Grounds, Shiv Shakti layout, beside Sontyam, Sontyam, Andhra Pradesh 530059</span>
+</a>
+
+<a href="tel:+918121334894">
+  <span class="ico">📱</span><span class="txt">+91&nbsp;81213&nbsp;34894</span>
+</a>
+<a href="mailto:slnsportsacademy@gmail.com">
+  <span class="ico">✉️</span><span class="txt">slnsportsacademy@gmail.com</span>
+</a>
+
+        </div>
+        <!-- Optional Google Map (responsive) -->
+        <div class="mapWrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4212.5673975025375!2d83.2872563!3d17.874042499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395f2dc4747127%3A0xbfe312a8eccb67f4!2sAcademy%20for%20Cricket%20Excellence!5e1!3m2!1sen!2sin!4v1764099506957!5m2!1sen!2sin"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER LINKS + DISCLAIMER -->
+      <div class="foot">
+    <div class="container">
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="terms&condition.html">Terms &amp; Conditions</a>
+        <a href="refund&cancellation.html">Refunds &amp; Cancellations</a>
+        <a href="privacypage.html">Privacy Policy</a>
+      </nav>
+      &copy; 2026 | Sri Lakshminarasimha Sports Academy (operating ACE - Academy for Cricket Excellence, Vizag)
+    </div>
+  </div>
+</div>
+<!-- ================== /ACE CRICKET ACADEMY — PRIVACY POLICY ================== -->
