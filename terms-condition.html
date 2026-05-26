@@ -1,0 +1,314 @@
+<!-- ================== ACE CRICKET ACADEMY — TERMS & CONDITIONS (LIGHT THEME • GENERIC PROGRAMS) ================== -->
+<div id="ace-terms" class="theme-light">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+    :root{
+      --orange:#FF7E00; --amber:#FF4500; --purple:#6B3BFF;
+      --ink:#1C1C1E; --ink-2:#3D4059; --muted:#6A6F8A;
+      --white:#ffffff; --ivory:#FBFBFE; --panel:#F6F8FF;
+      --line:#E6E9F4; --shadow:0 18px 46px rgba(18,20,34,.12);
+      --grid:1100px; --r:16px;
+    }
+    #ace-terms, #ace-terms *{ box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    .container{ max-width:var(--grid); margin:0 auto; padding:0 22px; }
+    .theme-light{ background:var(--ivory); color:var(--ink); }
+
+            /* Top bar / Nav */
+    .topbar { 
+      position:sticky; 
+      top:0; 
+      z-index:1000; 
+      background:rgba(255, 255, 255, 0.85); 
+      backdrop-filter:blur(12px); 
+      -webkit-backdrop-filter:blur(12px); 
+      border-bottom:1px solid rgba(230, 233, 244, 0.7); 
+      box-shadow:0 4px 30px rgba(18, 20, 34, 0.04); 
+      transition:all 0.3s ease; 
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; flex-wrap:nowrap; }
+    .brand { display:flex; align-items:center; gap:14px; text-decoration:none; transition:transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .brand:hover { transform:translateY(-2px); }
+    .brand img { height:68px; width:auto; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.08); }
+    .brand .meta { display:flex; flex-direction:column; line-height:1.2; gap:4px; }
+    .brand .meta b { font-weight:800; color:#22253A; font-size:1.05rem; letter-spacing:0.3px; }
+    .brand .meta small { color:#FF7E00; font-weight:700; font-size:0.8rem; letter-spacing:0.5px; text-transform:uppercase; }
+    .navlinks { display:flex; align-items:center; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .navlinks a { 
+      padding:10px 18px; 
+      border-radius:999px; 
+      border:1.4px solid transparent; 
+      text-decoration:none; 
+      font-weight:700; 
+      color:#3D4059; 
+      font-size:.95rem; 
+      white-space:nowrap; 
+      transition:all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    }
+    .navlinks a:hover { 
+      color:#FF7E00; 
+      background:linear-gradient(135deg, rgba(255,126,0,.08), rgba(255,69,0,.04)); 
+      border-color:rgba(255,126,0,.2); 
+      transform:translateY(-2px); 
+    }
+
+    /* Hero */
+    .hero{ padding:58px 0 28px; position:relative; }
+    .hero:before{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(80% 60% at 50% 0%, rgba(107,59,255,.10) 0%, rgba(107,59,255,0) 60%),
+        linear-gradient(180deg, rgba(255,126,0,.10), rgba(255,126,0,0));
+      pointer-events:none;
+    }
+    .h1{ font-weight:800; font-size:2.6rem; line-height:1.14; margin:0 0 8px; letter-spacing:.2px; }
+    .lead{ font-size:1.12rem; line-height:1.9; color:var(--ink-2); }
+    .tag{ display:inline-block; margin-top:10px; padding:8px 12px; border-radius:12px; border:1.2px solid #e5e8f5; background:#fff; font-weight:700; color:#61678b; }
+
+    /* Content */
+    .section{ padding:64px 0; }
+    .panel{ background:var(--white); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:26px; }
+    .h2{ font-weight:800; font-size:1.6rem; margin:38px 0 8px; }
+    .panel .h2:first-child{ margin-top:0; }
+    .h3{ font-weight:700; font-size:1.08rem; margin:14px 0 6px; color:#2b2f46; }
+    .p{ color:var(--ink-2); line-height:1.9; font-size:1.06rem; margin:8px 0 16px; }
+
+    /* Lists */
+    ul, ol{ color:var(--ink-2); line-height:1.9; margin:8px 0 16px 22px; font-size:1.06rem; }
+    li{ margin:4px 0; }
+
+    /* In-panel links */
+    .panel a{ color:var(--purple); font-weight:700; text-decoration:underline; text-decoration-thickness:1.5px; text-underline-offset:3px; }
+    .panel a:hover{ color:#5532d8; }
+
+    /* Table: keep tabular on mobile (horizontal scroll) */
+    .tableWrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    table.responsive{ width:100%; border-collapse:separate; border-spacing:0; border:1px solid #D9DEF2; border-radius:12px; overflow:hidden; background:#fff; margin:12px 0 0; }
+    thead th{ background:linear-gradient(180deg,#F4F6FF,#EEF1FF); color:#2b2e3d; text-align:left; padding:12px 14px; border-bottom:1px solid #DDE2F4; font-size:.98rem; white-space:nowrap; }
+    tbody td{ padding:12px 14px; border-top:1px solid #E6EAF6; color:#3b4160; font-size:.98rem; }
+    tbody tr:nth-child(2n){ background:#FAFBFF; }
+
+    /* Contact / Map — icons not underlined; phone/email on next line with minimal gap */
+    .contactCard{ background:#fff; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:22px; }
+    .contactRow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      font-size:1.10rem;
+      color:#2b2e3d;
+      column-gap:18px;
+      row-gap:2px;
+    }
+    .contactRow .label{ font-weight:800; }
+    .contactRow a{ color:#2b2e3d; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-weight:600; }
+    .contactRow .ico{ text-decoration:none; }
+    .contactRow .txt{ text-decoration:underline; text-underline-offset:3px; }
+    .contactRow a:hover .txt{ color:#5532d8; }
+    .contactRow .addr{ flex-basis:100%; }
+
+    .mapWrap{ margin-top:14px; border-radius:14px; overflow:hidden; border:1px solid #e5e8f5; }
+    .mapWrap iframe{ width:100%; height:360px; display:block; border:0; }
+
+    /* Footer */
+    .foot{ background:#f7f8ff; color:#6a6f8a; font-size:.98rem; line-height:1.6; padding:28px 0; border-top:1px solid var(--line); text-align:center; }
+    .foot .links{ margin:0 0 12px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .foot .links a{
+      color:var(--purple); font-weight:800; text-decoration:none; padding:6px 10px; border-radius:10px;
+      background:#ffffff; border:1px solid #E2E6FB;
+    }
+    .foot .links a:hover{ background:#F0F2FF; border-color:#cfd5fb; }
+
+    /* Mobile refinements — center Home button and tighten */
+    @media (max-width:780px){
+      .h1{ font-size:2.15rem; }
+      .panel{ padding:20px; }
+      .mapWrap iframe{ height:280px; }
+      .nav{ flex-wrap:wrap; align-items:flex-start; }
+      .btn-ghost{ order:2; width:100%; display:flex; justify-content:center; margin-top:8px; } /* centered button */
+      .brand img{ height:68px; }
+      .brand .meta{ gap:6px; }
+      thead th, tbody td{ padding:10px 12px; font-size:.95rem; }
+    }
+  </style>
+
+      <!-- NAV -->
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="ACE Home">
+        <img alt="ACE Academy crest logo" src="Assets folder/Ace Logo.png">
+        <span class="meta">
+          <b>Academy for Cricket Excellence</b>
+          <small>Since 2017 • Vizag</small>
+        </span>
+      </a>
+      <nav class="navlinks" aria-label="Home navigation">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="privacypage.html">Privacy</a>
+        <a href="terms&condition.html">Terms</a>
+        <a href="refund&cancellation.html">Refunds</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="h1">Terms &amp; Conditions</h1>
+      <p class="lead">These Terms & Conditions (“Terms”) govern your use of our website and participation in ACE – Academy for Cricket Excellence, operated by <strong>Sri Lakshminarasimha Sports Academy</strong> (“ACE”, “we”, “us”), including all coaching programs, training sessions, assessments, clinics, bootcamps, and related services.</p>
+      <span class="tag">Effective date: 25 Nov 2025</span>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section class="section">
+    <div class="container panel">
+
+      <div class="h2">1) Acceptance of Terms</div>
+      <p class="p">By accessing our website or enrolling in any ACE program, you agree to these Terms. If you are under 18, a parent/guardian must accept on your behalf.</p>
+
+      <div class="h2">2) Services & Programs</div>
+      <p class="p">ACE offers multiple services including—but not limited to—regular coaching programs (beginner to advanced), skill assessments, one-to-one sessions, holiday camps, strength & conditioning, and performance clinics. Specific details (curriculum, duration, fees) are described on the relevant pages or enrolment forms.</p>
+
+      <div class="h2">3) Eligibility & Enrolment</div>
+      <ul>
+        <li>Age and skill prerequisites may apply depending on the program level.</li>
+        <li>Accurate personal and contact information is required for enrolment and safety.</li>
+        <li>For minors, parent/guardian consent is mandatory; ID/age proof may be requested.</li>
+      </ul>
+
+      <div class="h2">4) Fees & Payments</div>
+      <ul>
+        <li>Program fees, taxes, and payment schedules are communicated before enrolment.</li>
+        <li>Invoices/receipts are provided by ACE or our payment gateway.</li>
+        <li>Late or failed payments may pause services until dues are cleared.</li>
+      </ul>
+
+      <div class="h2">5) Cancellations, Rescheduling & Refunds</div>
+      <p class="p">ACE aims to maintain schedules as published, but adjustments may occur for safety, logistics, facility availability, or coach illness. The quick reference below applies unless a specific program policy states otherwise:</p>
+      <div class="tableWrap">
+        <table class="responsive">
+          <thead><tr><th>Scenario</th><th>Policy</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>ACE cancels a scheduled session</td>
+              <td>Session rescheduled or fee credited (no cash refunds unless mandated)</td>
+            </tr>
+            <tr>
+              <td>Participant requests reschedule (prior notice)</td>
+              <td>Reasonable effort to accommodate within term; not guaranteed</td>
+            </tr>
+            <tr>
+              <td>Participant no-show without notice</td>
+              <td>Session deemed utilized</td>
+            </tr>
+            <tr>
+              <td>Withdrawal mid-term</td>
+              <td>Prorated credit at ACE’s discretion if seats are backfilled; otherwise not refundable</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="h2">6) Scheduling & Attendance</div>
+      <ul>
+        <li>Arrive on time and check in with the assigned coach/coordinator.</li>
+        <li>Make-up classes are subject to batch capacity and coach availability.</li>
+        <li>Public holidays or extreme weather may result in adjusted calendars.</li>
+      </ul>
+
+      <div class="h2">7) Code of Conduct</div>
+      <ul>
+        <li>Maintain discipline, respect officials, coaches, staff, and peers.</li>
+        <li>No harassment, abuse, or discrimination of any kind.</li>
+        <li>Follow facility rules, equipment guidelines, and safety instructions.</li>
+        <li>ACE may suspend/terminate participation for serious or repeated violations.</li>
+      </ul>
+
+      <div class="h2">8) Health & Medical</div>
+      <ul>
+        <li>Participants must be medically fit to train; disclose conditions/injuries in advance.</li>
+        <li>Bring necessary medication (e.g., inhalers) and inform the coach of critical needs.</li>
+        <li>In an emergency, ACE may coordinate first aid and contact guardians/emergency services.</li>
+      </ul>
+
+      <div class="h2">9) Facilities, Equipment & Personal Property</div>
+      <ul>
+        <li>Use facilities and gear responsibly; report damage immediately.</li>
+        <li>Bring your own kit unless the program specifies otherwise.</li>
+        <li>ACE is not responsible for loss/theft/damage of personal belongings.</li>
+      </ul>
+
+      <div class="h2">10) Media & Publicity Consent</div>
+      <ul>
+        <li>Training photos/videos may be captured for performance review, academy updates, and publicity.</li>
+        <li>You/your guardian grant ACE the right to use such media without additional compensation.</li>
+        <li>To request a non-publicity opt-out (where feasible), write to us before the program starts.</li>
+      </ul>
+
+      <div class="h2">11) Intellectual Property</div>
+      <p class="p">All ACE branding, training content, materials, and media are protected intellectual property. Do not reuse or distribute without written permission.</p>
+
+      <div class="h2">12) Privacy & Communications</div>
+      <p class="p">We process personal information as described in our <a href="/privacy">Privacy Policy</a>. By enrolling, you consent to receive essential service communications (schedules, changes, safety notices). You may opt out of marketing messages at any time.</p>
+
+      <div class="h2">13) Third-Party Services</div>
+      <p class="p">Payments, messaging, analytics, and maps may be provided by external vendors. Their terms and privacy practices apply in addition to ours.</p>
+
+      <div class="h2">14) Disclaimers & Limitation of Liability</div>
+      <ul>
+        <li>Sports training carries inherent risks. ACE implements reasonable safeguards but cannot eliminate all risks.</li>
+        <li>To the maximum extent permitted by law, ACE is not liable for indirect or consequential losses.</li>
+      </ul>
+
+      <div class="h2">15) Indemnity</div>
+      <p class="p">You/your guardian agree to indemnify and hold ACE harmless from claims arising from breach of these Terms or negligent conduct.</p>
+
+      <div class="h2">16) Changes to Services & Terms</div>
+      <p class="p">ACE may update programs, schedules, fees, and these Terms from time to time. Continued use/participation after changes constitutes acceptance.</p>
+
+      <div class="h2">17) Governing Law & Dispute Resolution</div>
+      <p class="p">These Terms are governed by the laws of India. Courts at Visakhapatnam, Andhra Pradesh, shall have exclusive jurisdiction. We encourage amicable resolution first—contact us using the details below.</p>
+
+      <div class="h2">18) Contact</div>
+      <div class="contactCard">
+        <div class="contactRow">
+          <span class="label">🏫 ACE — Academy for Cricket Excellence (Vizag)</span>
+
+          <a class="addr" href="https://maps.google.com/?q=ACE%20Grounds,%20Shiv%20Shakti%20layout,%20beside%20Sontyam,%20Sontyam,%20Andhra%20Pradesh%20530059" target="_blank" rel="noopener">
+            <span class="ico">📍</span><span class="txt">ACE Grounds, Shiv Shakti layout, beside Sontyam, Sontyam, Andhra Pradesh 530059</span>
+          </a>
+
+          <a href="tel:+918121334894">
+            <span class="ico">📱</span><span class="txt">+91&nbsp;81213&nbsp;34894</span>
+          </a>
+
+          <a href="mailto:slnsportsacademy@gmail.com">
+            <span class="ico">✉️</span><span class="txt">slnsportsacademy@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="mapWrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4212.5673975025375!2d83.2872563!3d17.874042499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395f2dc4747127%3A0xbfe312a8eccb67f4!2sAcademy%20for%20Cricket%20Excellence!5e1!3m2!1sen!2sin!4v1764099506957!5m2!1sen!2sin"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER LINKS + DISCLAIMER -->
+      <div class="foot">
+    <div class="container">
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="terms&condition.html">Terms &amp; Conditions</a>
+        <a href="refund&cancellation.html">Refunds &amp; Cancellations</a>
+        <a href="privacypage.html">Privacy Policy</a>
+      </nav>
+      &copy; 2026 | Sri Lakshminarasimha Sports Academy (operating ACE - Academy for Cricket Excellence, Vizag)
+    </div>
+  </div>
+</div>
+<!-- ================== /ACE CRICKET ACADEMY — TERMS & CONDITIONS ================== -->
