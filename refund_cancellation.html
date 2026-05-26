@@ -1,0 +1,326 @@
+<!-- ================== ACE CRICKET ACADEMY — REFUNDS & CANCELLATIONS (LIGHT THEME • GENERIC PROGRAMS) ================== -->
+<div id="ace-refunds" class="theme-light">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+    :root{
+      --orange:#FF7E00; --amber:#FF4500; --purple:#6B3BFF;
+      --ink:#1C1C1E; --ink-2:#404257; --muted:#6A6F8A;
+      --white:#ffffff; --ivory:#FBFBFE; --panel:#F6F8FF;
+      --line:#E6E9F4; --shadow:0 18px 46px rgba(18,20,34,.12);
+      --grid:1100px; --r:16px;
+    }
+    #ace-refunds, #ace-refunds *{ box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    .container{ max-width:var(--grid); margin:0 auto; padding:0 22px; }
+    .theme-light{ background:var(--ivory); color:var(--ink); }
+
+            /* Top bar / Nav */
+    .topbar { 
+      position:sticky; 
+      top:0; 
+      z-index:1000; 
+      background:rgba(255, 255, 255, 0.85); 
+      backdrop-filter:blur(12px); 
+      -webkit-backdrop-filter:blur(12px); 
+      border-bottom:1px solid rgba(230, 233, 244, 0.7); 
+      box-shadow:0 4px 30px rgba(18, 20, 34, 0.04); 
+      transition:all 0.3s ease; 
+    }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; flex-wrap:nowrap; }
+    .brand { display:flex; align-items:center; gap:14px; text-decoration:none; transition:transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+    .brand:hover { transform:translateY(-2px); }
+    .brand img { height:68px; width:auto; border-radius:12px; box-shadow:0 8px 18px rgba(0,0,0,.08); }
+    .brand .meta { display:flex; flex-direction:column; line-height:1.2; gap:4px; }
+    .brand .meta b { font-weight:800; color:#22253A; font-size:1.05rem; letter-spacing:0.3px; }
+    .brand .meta small { color:#FF7E00; font-weight:700; font-size:0.8rem; letter-spacing:0.5px; text-transform:uppercase; }
+    .navlinks { display:flex; align-items:center; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .navlinks a { 
+      padding:10px 18px; 
+      border-radius:999px; 
+      border:1.4px solid transparent; 
+      text-decoration:none; 
+      font-weight:700; 
+      color:#3D4059; 
+      font-size:.95rem; 
+      white-space:nowrap; 
+      transition:all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); 
+    }
+    .navlinks a:hover { 
+      color:#FF7E00; 
+      background:linear-gradient(135deg, rgba(255,126,0,.08), rgba(255,69,0,.04)); 
+      border-color:rgba(255,126,0,.2); 
+      transform:translateY(-2px); 
+    }
+
+    /* Hero */
+    .hero{ padding:58px 0 28px; position:relative; }
+    .hero:before{
+      content:""; position:absolute; inset:0;
+      background:
+        radial-gradient(80% 60% at 50% 0%, rgba(107,59,255,.10) 0%, rgba(107,59,255,0) 60%),
+        linear-gradient(180deg, rgba(255,126,0,.10), rgba(255,126,0,0));
+      pointer-events:none;
+    }
+    .h1{ font-weight:800; font-size:2.6rem; line-height:1.14; margin:0 0 8px; letter-spacing:.2px; }
+    .lead{ font-size:1.12rem; line-height:1.9; color:var(--ink-2); }
+    .tag{ display:inline-block; margin-top:10px; padding:8px 12px; border-radius:12px; border:1.2px solid #e5e8f5; background:#fff; font-weight:700; color:#61678b; }
+
+    /* Content */
+    .section{ padding:64px 0; }
+    .panel{ background:var(--white); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:26px; }
+    .h2{ font-weight:800; font-size:1.6rem; margin:36px 0 8px; }
+    .panel .h2:first-child{ margin-top:0; }
+    .h3{ font-weight:700; font-size:1.08rem; margin:14px 0 6px; color:#2b2f46; }
+    .p{ color:var(--ink-2); line-height:1.9; font-size:1.06rem; margin:8px 0 16px; }
+
+    /* Lists */
+    ul, ol{ color:var(--ink-2); line-height:1.9; margin:8px 0 16px 22px; font-size:1.06rem; }
+    li{ margin:4px 0; }
+
+    /* Table (keep tabular on mobile; allow horizontal scroll) */
+    .tableWrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    table.responsive{ width:100%; border-collapse:separate; border-spacing:0; border:1px solid #D9DEF2; border-radius:12px; overflow:hidden; background:#fff; margin:12px 0 0; }
+    thead th{ background:linear-gradient(180deg,#F4F6FF,#EEF1FF); color:#2b2e3d; text-align:left; padding:12px 14px; border-bottom:1px solid #DDE2F4; font-size:.98rem; white-space:nowrap; }
+    tbody td{ padding:12px 14px; border-top:1px solid #E6EAF6; color:#3b4160; font-size:.98rem; }
+    tbody tr:nth-child(2n){ background:#FAFBFF; }
+
+    /* Contact / Map — icons not underlined, address full line, tight gap */
+    .contactCard{ background:#fff; border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:22px; }
+    .contactRow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      font-size:1.10rem;
+      color:#2b2e3d;
+      column-gap:18px;
+      row-gap:2px;
+    }
+    .contactRow .label{ font-weight:800; }
+    .contactRow a{ color:#2b2e3d; text-decoration:none; display:inline-flex; align-items:center; gap:6px; font-weight:600; }
+    .contactRow .ico{ text-decoration:none; }
+    .contactRow .txt{ text-decoration:underline; text-underline-offset:3px; }
+    .contactRow a:hover .txt{ color:#5532d8; }
+    .contactRow .addr{ flex-basis:100%; }
+
+    .mapWrap{ margin-top:14px; border-radius:14px; overflow:hidden; border:1px solid #e5e8f5; }
+    .mapWrap iframe{ width:100%; height:360px; display:block; border:0; }
+
+    /* Footer */
+    .foot{ background:#f7f8ff; color:#6a6f8a; font-size:.98rem; line-height:1.6; padding:28px 0; border-top:1px solid var(--line); text-align:center; }
+    .foot .links{ margin:0 0 12px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+    .foot .links a{
+      color:var(--purple); font-weight:800; text-decoration:none; padding:6px 10px; border-radius:10px;
+      background:#ffffff; border:1px solid #E2E6FB;
+    }
+    .foot .links a:hover{ background:#F0F2FF; border-color:#cfd5fb; }
+
+    /* Mobile refinements — center Home button, keep tables tabular */
+    @media (max-width:780px){
+      .h1{ font-size:2.15rem; }
+      .panel{ padding:20px; }
+      .mapWrap iframe{ height:280px; }
+      .nav{ flex-wrap:wrap; align-items:flex-start; }
+      .btn-ghost{ order:2; width:100%; display:flex; justify-content:center; margin-top:8px; }
+      .brand img{ height:68px; }
+      .brand .meta{ gap:6px; }
+      thead th, tbody td{ padding:10px 12px; font-size:.95rem; }
+    }
+  </style>
+
+      <!-- NAV -->
+  <div class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="ACE Home">
+        <img alt="ACE Academy crest logo" src="Assets folder/Ace Logo.png">
+        <span class="meta">
+          <b>Academy for Cricket Excellence</b>
+          <small>Since 2017 • Vizag</small>
+        </span>
+      </a>
+      <nav class="navlinks" aria-label="Home navigation">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="privacypage.html">Privacy</a>
+        <a href="terms&condition.html">Terms</a>
+        <a href="refund&cancellation.html">Refunds</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="h1">Refunds &amp; Cancellations</h1>
+      <p class="lead">
+        Clear, fair rules for enrolments, schedule changes, credits, and refunds across the coaching programs and services offered by ACE – Academy for Cricket Excellence, under <strong>Sri Lakshminarasimha Sports Academy</strong>
+      </p>
+      <span class="tag">Effective date: 25 Nov 2025</span>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="section">
+    <div class="container panel">
+      <div class="h2">1) Overview</div>
+      <p class="p">
+        This policy applies to coaching programs, training sessions, assessments, clinics, bootcamps, and other services
+        offered by ACE – Academy for Cricket Excellence (“ACE”, “we”, “us”), operated by
+        <strong>Sri Lakshminarasimha Sports Academy</strong>.
+        Training batches are planned in advance with fixed capacity, coach allocation, and ground bookings. Once a seat
+        is blocked for a player, it cannot be easily replaced mid-term. Therefore, <strong>all fees paid are treated as
+        final, non-refundable, and non-cancellable</strong>, except in the narrow case of verified duplicate payments or
+        payment gateway errors.
+      </p>
+
+      <div class="h2">2) Key principles</div>
+      <ul>
+        <li><strong>No refunds and no cancellations</strong> are allowed in any circumstances once payment is successfully completed, except for verified duplicate payments/technical errors.</li>
+        <li>Seats are limited and batch-wise; a confirmed enrolment blocks a slot, so we can only support <strong>rescheduling</strong> within the same program/term where operationally possible.</li>
+        <li>Third-party payment gateway charges, convenience fees, and taxes are generally <strong>non-refundable</strong> once charged.</li>
+      </ul>
+
+      <div class="h2">3) Quick reference</div>
+      <div class="tableWrap">
+        <table class="responsive">
+          <thead>
+            <tr><th>Scenario</th><th>Outcome</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ACE cancels a scheduled session (e.g., coach illness, operational reason)</td>
+              <td>Session is <strong>rescheduled</strong> to another suitable date/time. <strong>No refunds</strong> under any circumstances.</td>
+            </tr>
+            <tr>
+              <td>Weather / facility issue (rain, ground unavailability, safety advisories)</td>
+              <td>Session is <strong>rescheduled</strong> or adjusted in the calendar. <strong>No refunds or cancellations.</strong></td>
+            </tr>
+            <tr>
+              <td>Participant requests reschedule (with prior notice)</td>
+              <td>Reasonable effort to <strong>reschedule within the same term/batch structure</strong>, subject to capacity; no guarantee, and <strong>no refunds.</strong></td>
+            </tr>
+            <tr>
+              <td>Participant no-show without prior intimation</td>
+              <td>Session is treated as <strong>utilised</strong>; no reschedule, no refund, no carry-forward.</td>
+            </tr>
+            <tr>
+              <td>Withdrawal mid-term or change of mind</td>
+              <td>Remaining sessions are <strong>forfeited</strong>; no refunds, credits, or transfers to another player/program.</td>
+            </tr>
+            <tr>
+              <td>Administrative / mistaken <strong>duplicate payment</strong> or clear technical error</td>
+              <td>Reviewed by ACE; if verified, refund is <strong>credited back to the original payment method within 3–5 business days</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="h2">4) Cancellations &amp; rescheduling (participants)</div>
+      <ul>
+        <li>ACE does not accept <strong>cancellations</strong> once payment is made. All confirmed enrolments are final.</li>
+        <li>If you are unable to attend a particular session, inform us as early as possible; where feasible, we will try to offer a <strong>rescheduled slot within the same term/program</strong>.</li>
+        <li>All rescheduling is subject to <strong>batch capacity, coach availability, and ground slots</strong>, and cannot be guaranteed.</li>
+        <li>Support for rescheduling does <strong>not</strong> convert into any right to a refund, partial refund, or credit.</li>
+      </ul>
+
+      <div class="h2">5) ACE-initiated changes</div>
+      <p class="p">
+        In certain situations (coach illness, safety concerns, facility maintenance, tournament commitments, or similar),
+        ACE may change session timings, club days, or temporarily pause a batch. In such cases, we will:
+      </p>
+      <ul>
+        <li>Inform you through the contact details provided at enrolment (e.g., WhatsApp/SMS/email/call).</li>
+        <li>Provide a <strong>rescheduled session</strong> or adjust the calendar to ensure the planned training volume is maintained as far as operationally possible.</li>
+        <li><strong>No refunds or cancellations</strong> will be offered due to such operational changes.</li>
+      </ul>
+
+      <div class="h2">6) Refund eligibility (duplicate payments only)</div>
+      <p class="p">
+        Except for verified duplicate or erroneous payments, <strong>there are no refunds in any circumstances</strong>.
+        The only case where a refund may be processed is:
+      </p>
+      <ul>
+        <li><strong>Duplicate payment</strong> for the same player, same program, and same period due to gateway/banking error.</li>
+        <li>Clearly identifiable <strong>technical failure</strong> where the amount has been debited twice or more for a single transaction.</li>
+      </ul>
+      <p class="p">
+        In such cases, once verified in our records and with the payment gateway/bank, ACE will process a refund of the
+        excess amount back to the <strong>original source of payment</strong>.
+      </p>
+
+      <div class="h2">7) How to report a payment issue or duplicate charge</div>
+      <ol>
+        <li>Email or WhatsApp us with the player’s <strong>full name, program, batch (if applicable), date of payment, and mobile number</strong>.</li>
+        <li>Share <strong>proof of payment</strong> for each transaction (screenshot/UTR/reference number) clearly showing duplicate debit.</li>
+        <li>Our team will verify the entries with the payment gateway and our records.</li>
+      </ol>
+      <p class="p">
+        Once a duplicate payment is confirmed, the excess amount will be refunded to the original payment method.
+      </p>
+
+      <div class="h2">8) Processing timelines for approved refunds</div>
+      <ul>
+        <li>Verified duplicate payments are typically <strong>credited within 3–5 business days</strong> from confirmation.</li>
+        <li>The time taken for the amount to reflect in your account depends on your bank/card issuer and is <strong>outside ACE’s control</strong>.</li>
+      </ul>
+
+      <div class="h2">9) Chargebacks</div>
+      <p class="p">
+        If a chargeback/dispute is raised directly with the bank or card issuer without first contacting ACE,
+        your access to sessions may be paused while the matter is investigated. We will provide our records to the
+        payment gateway/bank and request that disputes be handled fairly as per this policy.
+      </p>
+
+      <div class="h2">10) Force majeure</div>
+      <p class="p">
+        Events beyond reasonable control (extreme weather, natural disasters, public authority orders, epidemics, etc.)
+        may disrupt or delay sessions. In such cases, ACE will prioritise <strong>rescheduling or adjusting calendars</strong>.
+        No refunds or cancellations will be provided due to force majeure events.
+      </p>
+
+      <div class="h2">11) Updates to this policy</div>
+      <p class="p">
+        Sri Lakshminarasimha Sports Academy may revise this policy from time to time. The “Effective date” at the top
+        reflects the latest version. Material changes will be updated on this page.
+      </p>
+
+      <div class="h2">12) Contact</div>
+      <div class="contactCard">
+        <div class="contactRow">
+          <span class="label">ACE — Academy for Cricket Excellence, Vizag</span>
+
+          <a class="addr" href="https://maps.google.com/?q=ACE%20Grounds,%20Shiv%20Shakti%20layout,%20beside%20Sontyam,%20Sontyam,%20Andhra%20Pradesh%20530059" target="_blank" rel="noopener">
+            <span class="ico">📍</span><span class="txt">ACE Grounds, Shiv Shakti layout, beside Sontyam, Sontyam, Andhra Pradesh 530059</span>
+          </a>
+
+          <a href="tel:+918121334894">
+            <span class="ico">📱</span><span class="txt">+91&nbsp;81213&nbsp;34894</span>
+          </a>
+
+          <a href="mailto:slnsportsacademy@gmail.com">
+            <span class="ico">✉️</span><span class="txt">slnsportsacademy@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="mapWrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4212.5673975025375!2d83.2872563!3d17.874042499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a395f2dc4747127%3A0xbfe312a8eccb67f4!2sAcademy%20for%20Cricket%20Excellence!5e1!3m2!1sen!2sin!4v1764099506957!5m2!1sen!2sin"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER LINKS + DISCLAIMER -->
+      <div class="foot">
+    <div class="container">
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="About.html">About Us</a>
+        <a href="terms&condition.html">Terms &amp; Conditions</a>
+        <a href="refund&cancellation.html">Refunds &amp; Cancellations</a>
+        <a href="privacypage.html">Privacy Policy</a>
+      </nav>
+      &copy; 2026 | Sri Lakshminarasimha Sports Academy (operating ACE - Academy for Cricket Excellence, Vizag)
+    </div>
+  </div>
+</div>
+<!-- ================== /ACE CRICKET ACADEMY — REFUNDS & CANCELLATIONS ================== -->
